@@ -46,7 +46,7 @@ function validarExamen(){ // Función que valida que el examen haya sido resuelt
         }
         return true;
     } catch (e) {
-        alert("creasheo: "+ e);
+  
         return false;
         
     }
