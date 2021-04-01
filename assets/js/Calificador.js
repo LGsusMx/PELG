@@ -19,8 +19,8 @@ var DADAnswers= ['has','haz','as','ha','a','ah','Asia','hacia','hasta','asta',];
 function Calificar() {// Función que se manda a llamar al momento de presionar calificar 
     var calificacion = 0;
     if (validarExamen()) {
-        calificacion = calificarRadioButtons()+calificarDropDown()+calificarDragAndDrop();
-        alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/3.0');
+        calificacion = ((calificarRadioButtons()+calificarDropDown()+calificarDragAndDrop())*10)/3;
+        alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/10.0');
     }
     else{
         alert("Por favor, responda todas las preguntas para poder ser calificado.")
