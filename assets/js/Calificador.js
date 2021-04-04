@@ -16,33 +16,56 @@ var ddAnswers = ['Sobrino',"Antipática","Maestro","Indecente","Comprar","Causas
 ///////////////////////////////////////////////////
 var DADQuestions=['ddoA1','ddoA2','ddoA3','ddoA4','ddoA5','ddoA6','ddoA7','ddoA8','ddoA9','ddoA10',];
 var DADAnswers= ['has','haz','as','ha','a','ah','Asia','hacia','hasta','asta',];
-function Calificar() {// Función que se manda a llamar al momento de presionar calificar 
+function Calificar1() {// Función que se manda a llamar al momento de presionar calificar 
     var calificacion = 0;
-    if (validarExamen()) {
-        calificacion = ((calificarRadioButtons()+calificarDropDown()+calificarDragAndDrop())*10)/3;
+    if (validarExamen1()) {
+        calificacion = calificarRadioButtons()*10;
         alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/10.0');
+        if (calificacion == 10) {
+            document.getElementById("btnActi2").textContent="Al ejercicio";
+            document.getElementById("btnActi2").disabled = false; 
+            document.getElementById("btnActi1").textContent="Completado con 10";
+            document.getElementById("btnActi1").disabled = true; 
+        }
     }
     else{
         alert("Por favor, responda todas las preguntas para poder ser calificado.")
     }
 }
-function validarExamen(){ // Función que valida que el examen haya sido resuelto en su totalidad
+function Calificar2() {// Función que se manda a llamar al momento de presionar calificar 
+    var calificacion = 0;
+    if (validarExamen2()) {
+        calificacion = calificarDropDown()*10
+        alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/10.0');
+        if (calificacion == 10) {
+            document.getElementById("btnActi3").textContent="Al ejercicio";
+            document.getElementById("btnActi3").disabled = false; 
+            document.getElementById("btnActi2").textContent="Completado con 10";
+            document.getElementById("btnActi2").disabled = true; 
+        }
+    }
+    else{
+        alert("Por favor, responda todas las preguntas para poder ser calificado.")
+    }
+}
+function Calificar3() {// Función que se manda a llamar al momento de presionar calificar 
+    var calificacion = 0;
+    if (validarExamen3()) {
+        calificacion = calificarDragAndDrop()*10;
+        alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/10.0');
+        if (calificacion == 10) {
+            document.getElementById("btnActi3").textContent="Completado con 10";
+            document.getElementById("btnActi3").disabled = true; 
+        }
+    }
+    else{
+        alert("Por favor, responda todas las preguntas para poder ser calificado.")
+    }
+}
+function validarExamen1(){ // Función que valida que el examen haya sido resuelto en su totalidad
     try {
         for (let index = 0; index < radioB.length; index++) {
             var seleccion = document.querySelector('input[name='+radioB[index]+']:checked').value;
-        }
-        for (let index2 = 0; index2 < ddQuestions.length; index2++) {
-            var combo = document.getElementById(ddQuestions[index2]);
-            var selected = combo.options[combo.selectedIndex].text;
-            if (selected == "") {
-                return false;
-            }
-        }
-        for (let index3 = 0; index3 < DADQuestions.length; index3++) {
-            var div = document.getElementById(DADQuestions[index3]);
-            if (div.textContent == "") {
-                return false;
-            }
         }
         return true;
     } catch (e) {
@@ -51,6 +74,34 @@ function validarExamen(){ // Función que valida que el examen haya sido resuelt
         
     }
    
+}
+function validarExamen2(){
+    try {
+        for (let index2 = 0; index2 < ddQuestions.length; index2++) {
+            var combo = document.getElementById(ddQuestions[index2]);
+            var selected = combo.options[combo.selectedIndex].text;
+            if (selected == "") {
+                return false;
+            }
+        }
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+function validarExamen3(){
+    try {
+        for (let index3 = 0; index3 < DADQuestions.length; index3++) {
+            var div = document.getElementById(DADQuestions[index3]);
+            if (div.textContent == "") {
+                return false;
+            }
+        }
+        return true;
+    } catch (e) {
+        return false;
+    }
 }
 function calificarRadioButtons() {// Función que califica el ejercicio que utiliza RB (Uso de tilde)
     var calificacionRB= 0;

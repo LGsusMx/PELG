@@ -31,8 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" ><img class="logo-custom" src="assets/img/Sin título.png"
-                        alt="" /></a>
+                <a class="navbar-brand"><img class="logo-custom" src="assets/img/Sin título.png" alt="" /></a>
             </div>
             <div class="navbar-collapse collapse move-me">
                 <ul class="nav navbar-nav navbar-right">
@@ -74,10 +73,10 @@
                                     <a href="#faculty-sec" class="btn btn-info btn-lg">
                                         Al Ejercicio
                                     </a>
-                                    <a href="#features-sec" class="btn btn-success btn-lg" >
+                                    <a href="#features-sec" class="btn btn-success btn-lg">
                                         Características
                                     </a>
-                                    
+
                                 </li>
                                 <!-- End Slider 02 -->
                             </ul>
@@ -125,8 +124,9 @@
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
                 <div class="about-div">
                     <div class="centracion"> <i class="fa fa-clock-o fa-4x icon-round-border"></i>
-                        <h3>Practico</h3></div>
-                   
+                        <h3>Practico</h3>
+                    </div>
+
                     <hr />
                     <hr />
                     <p>
@@ -137,9 +137,9 @@
             </div>
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
                 <div class="about-div">
-                    <div class="centracion"> 
-                    <i class="fa fa-bolt fa-4x icon-round-border"></i>
-                    <h3>Eficiente</h3>
+                    <div class="centracion">
+                        <i class="fa fa-bolt fa-4x icon-round-border"></i>
+                        <h3>Eficiente</h3>
                     </div>
                     <hr />
                     <hr />
@@ -150,9 +150,9 @@
             </div>
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
                 <div class="about-div">
-                    <div class="centracion"> 
-                    <i class="fa fa-money fa-4x icon-round-border"></i>
-                    <h3>Gratis</h3>
+                    <div class="centracion">
+                        <i class="fa fa-money fa-4x icon-round-border"></i>
+                        <h3>Gratis</h3>
                     </div>
                     <hr />
                     <hr />
@@ -185,17 +185,18 @@
                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
                     <div class="faculty-div">
                         <img width="290" height="245" src="assets/img/faculty/ejercicio1.png" class="img-rounded" />
-                        <div > 
+                        <div>
                             <h3 style="text-align: center;">Ejercicio 1</h3>
                             <hr />
-                            <h4 style="text-align: center;">Uso de Tilde, Antónimos y Parónimos
+                            <h4 style="text-align: center;">Uso de Tilde
                             </h4>
                             <p class="btnCentrado">
-                                <button data-toggle="modal" data-target="#examModal" type="button"
+                                <button id="btnActi1" data-toggle="modal" data-target="#examModal" type="button"
                                     class="btn btn-primary btn-lg">Al ejercicio</button>
-    
-                            </p></div>
-                       
+
+                            </p>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
@@ -203,9 +204,10 @@
                         <img width="290" height="245" src="assets/img/faculty/ejercicio2.png" class="img-rounded" />
                         <h3 style="text-align: center;">Ejercicio 2</h3>
                         <hr />
-                        <h4 style="text-align: center;">Palabras agudas, graves y esdrújulas </h4>
+                        <h4 style="text-align: center;">Antónimos </h4>
                         <p class="btnCentrado">
-                            <button type="button" class="btn btn-primary btn-lg" disabled>Próximamente...</button>
+                            <button id="btnActi2" data-toggle="modal" data-target="#examModal2" type="button"
+                                class="btn btn-primary btn-lg" disabled>Realiza ejercicio 1</button>
 
                         </p>
                     </div>
@@ -215,9 +217,10 @@
                         <img width="290" height="245" src="assets/img/faculty/ejercicio3.png" class="img-rounded" />
                         <h3 style="text-align: center;">Ejercicio 3</h3>
                         <hr />
-                        <h4 style="text-align: center;">Conectores y signos de puntuación</h4>
+                        <h4 style="text-align: center;">Parónimos</h4>
                         <p class="btnCentrado">
-                            <button type="button" class="btn btn-primary btn-lg" disabled>Próximamente...</button>
+                            <button id="btnActi3" data-toggle="modal" data-target="#examModal3" type="button"
+                                class="btn btn-primary btn-lg" disabled>Realiza ejercicio 2</button>
 
                         </p>
                     </div>
@@ -232,7 +235,7 @@
             Dariela & Ulises</a>
     </div>
     <!-- FOOTER SECTION END-->
-    <!-- EXAM MODAL SECTION BEGIN-->
+    <!-- EXAM MODAL 1 SECTION BEGIN-->
     <div class="modal fade" id="examModal" tabindex="-1" role="dialog" aria-labelledby="examModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -330,6 +333,26 @@
                         </div>
 
                     </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="Calificar1()" class="btn btn-primary">Evaluar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXAM MODAL 1 SECTION BEGIN-->
+    <div class="modal fade" id="examModal2" tabindex="-1" role="dialog" aria-labelledby="examModal2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <form>
                         <div class="form-group">
                             <h1 for="recipient-name" class="col-form-label">Selecciona el antónimo correspondiente al
@@ -348,8 +371,8 @@
                                         <td class="tflex">
                                             <span>Sobrina</span>
                                         </td>
-                                        <td >
-                                            <select name="dd1" id="dd1" >
+                                        <td>
+                                            <select name="dd1" id="dd1">
                                                 <option value=""></option>
                                                 <option value="Tio">Tio</option>
                                                 <option value="Sobrino">Sobrino</option>
@@ -358,13 +381,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Simpática</span>
                                         </td>
-                                        <td >
-                                            <select name="dd2" id="dd2" >
+                                        <td>
+                                            <select name="dd2" id="dd2">
                                                 <option value=""></option>
                                                 <option value="A">Agradable</option>
                                                 <option value="B">Aburrida</option>
@@ -373,13 +396,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Discente</span>
                                         </td>
-                                        <td >
-                                            <select name="dd3" id="dd3" >
+                                        <td>
+                                            <select name="dd3" id="dd3">
                                                 <option value=""></option>
                                                 <option value="A">Mesías</option>
                                                 <option value="B">Maestro</option>
@@ -388,13 +411,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Respetable</span>
                                         </td>
-                                        <td >
-                                            <select name="dd4" id="dd4" >
+                                        <td>
+                                            <select name="dd4" id="dd4">
                                                 <option value=""></option>
                                                 <option value="A">Admirable</option>
                                                 <option value="B">Mandón</option>
@@ -403,13 +426,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Vender</span>
                                         </td>
-                                        <td >
-                                            <select name="dd5" id="dd5" >
+                                        <td>
+                                            <select name="dd5" id="dd5">
                                                 <option value=""></option>
                                                 <option value="A">Aventar</option>
                                                 <option value="B">Robar</option>
@@ -418,13 +441,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Consecuencias</span>
                                         </td>
-                                        <td >
-                                            <select name="dd6" id="dd6" >
+                                        <td>
+                                            <select name="dd6" id="dd6">
                                                 <option value=""></option>
                                                 <option value="A">Causas</option>
                                                 <option value="B">Problemas</option>
@@ -433,13 +456,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     <tr>
+                                    <!-------------------------------------------------------->
+                                    <tr>
                                         <td class="tflex">
                                             <span>Cóncava</span>
                                         </td>
-                                        <td >
-                                            <select name="dd7" id="dd7" >
+                                        <td>
+                                            <select name="dd7" id="dd7">
                                                 <option value=""></option>
                                                 <option value="A">Refractaria</option>
                                                 <option value="B">Convexa</option>
@@ -448,61 +471,88 @@
                                             </select>
                                         </td>
                                     </tr>
-                                     <!-------------------------------------------------------->
-                                     
+                                    <!-------------------------------------------------------->
+
                                 </tbody>
                             </table>
                         </div>
 
                     </form>
-                    <form>
-                        <div class="form-group">
-                            <h1 for="recipient-name" class="col-form-label">Arrastra el parónimo correcto en base al contexto proporcionado</h1>
-                            <!-------------------------------------------------------->
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col-sm-6">
-                                    <div id="modules">
-                                      <span class="drag"><a class="btn btn-default">a</a></span>
-                                      <span class="drag"><a class="btn btn-default">ha</a></span> 
-                                      <span class="drag"><a class="btn btn-default">ah</a></span>
-                                      <span class="drag"><a class="btn btn-default">as</a></span>
-                                      <span class="drag"><a class="btn btn-default">has</a></span>
-                                      <span class="drag"><a class="btn btn-default">haz</a></span>
-                                      <span class="drag"><a class="btn btn-default">Asia</a></span>
-                                      <span class="drag"><a class="btn btn-default">hacia</a></span>
-                                      <span class="drag"><a class="btn btn-default">hasta</a></span>
-                                      <span class="drag"><a class="btn btn-default">asta</a></span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div >
-                                    <p>¿Como <span id="ddoA1" class="dropzone"></span> estado todo este tiempo?</p>
-                                    <p><span id="ddoA2" class="dropzone"></span> lo que tengas que hacer para ser feliz.</p>
-                                    <p>Lionel Messi es un <span id="ddoA3" class="dropzone"></span> del fútbol.</p>
-
-                                    <p>Cristiano Ronaldo <span id="ddoA4" class="dropzone"></span> marcado un gol.</p>
-                                    <p>Ella quiere ir a mi casa  <span id="ddoA5" class="dropzone"></span> estudiar.</p>
-                                    <p><span id="ddoA6" class="dropzone"></span> , y yo que pensaba que te gustaba tanto como tú a mí.</p>
-                                    <p>Quiero viajar a algún país de <span id="ddoA7" class="dropzone"></span> .</p>
-                                    <p>¿ <span id="ddoA8" class="dropzone"></span> donde te diriges?</p>
-                                    <p>¡<span id="ddoA9" class="dropzone"></span> que te diste cuenta que me gustas!</p>
-                                    <p>Del <span id="ddoA10" class="dropzone"></span> pendía la bandera de la república.</p>
-                                  </div>
-                              </div>
-                        </div>
-
-                    </form>
-
                 </div>
-                
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" onclick="Calificar()" class="btn btn-primary">Evaluar</button>
+                    <button type="button" onclick="Calificar2()" class="btn btn-primary">Evaluar</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- EXAM MODAL SECTION END-->
+
+    <!-- EXAM MODAL 1 SECTION BEGIN-->
+    <div class="modal fade" id="examModal3" tabindex="-1" role="dialog" aria-labelledby="examModal3" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                            <h1 for="recipient-name" class="col-form-label">Arrastra el parónimo correcto en base al
+                                contexto proporcionado</h1>
+                            <!-------------------------------------------------------->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="modules">
+                                            <span class="drag"><a class="btn btn-default">a</a></span>
+                                            <span class="drag"><a class="btn btn-default">ha</a></span>
+                                            <span class="drag"><a class="btn btn-default">ah</a></span>
+                                            <span class="drag"><a class="btn btn-default">as</a></span>
+                                            <span class="drag"><a class="btn btn-default">has</a></span>
+                                            <span class="drag"><a class="btn btn-default">haz</a></span>
+                                            <span class="drag"><a class="btn btn-default">Asia</a></span>
+                                            <span class="drag"><a class="btn btn-default">hacia</a></span>
+                                            <span class="drag"><a class="btn btn-default">hasta</a></span>
+                                            <span class="drag"><a class="btn btn-default">asta</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>¿Como <span id="ddoA1" class="dropzone"></span> estado todo este tiempo?</p>
+                                    <p><span id="ddoA2" class="dropzone"></span> lo que tengas que hacer para ser feliz.
+                                    </p>
+                                    <p>Lionel Messi es un <span id="ddoA3" class="dropzone"></span> del fútbol.</p>
+
+                                    <p>Cristiano Ronaldo <span id="ddoA4" class="dropzone"></span> marcado un gol.</p>
+                                    <p>Ella quiere ir a mi casa <span id="ddoA5" class="dropzone"></span> estudiar.</p>
+                                    <p><span id="ddoA6" class="dropzone"></span> , y yo que pensaba que te gustaba tanto
+                                        como tú a mí.</p>
+                                    <p>Quiero viajar a algún país de <span id="ddoA7" class="dropzone"></span> .</p>
+                                    <p>¿ <span id="ddoA8" class="dropzone"></span> donde te diriges?</p>
+                                    <p>¡<span id="ddoA9" class="dropzone"></span> que te diste cuenta que me gustas!</p>
+                                    <p>Del <span id="ddoA10" class="dropzone"></span> pendía la bandera de la república.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="Calificar3()" class="btn btn-primary">Evaluar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EXAM MODAL SECTION END-->
+
     <!-- EXAM MODAL SECTION END-->
     <!--  Jquery Core Script -->
     <script src="assets/js/jquery-1.10.2.js"></script>
