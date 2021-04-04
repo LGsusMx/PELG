@@ -24,9 +24,9 @@ function Calificar1() {// Función que se manda a llamar al momento de presionar
         if (calificacion == 10) {
             document.getElementById("btnActi2").textContent="Al ejercicio";
             document.getElementById("btnActi2").disabled = false; 
-            document.getElementById("btnActi1").textContent="Completado con 10";
             document.getElementById("btnActi1").disabled = true; 
         }
+        document.getElementById("btnActi1").textContent="Completado "+calificacion;
     }
     else{
         alert("Por favor, responda todas las preguntas para poder ser calificado.")
@@ -40,9 +40,9 @@ function Calificar2() {// Función que se manda a llamar al momento de presionar
         if (calificacion == 10) {
             document.getElementById("btnActi3").textContent="Al ejercicio";
             document.getElementById("btnActi3").disabled = false; 
-            document.getElementById("btnActi2").textContent="Completado con 10";
             document.getElementById("btnActi2").disabled = true; 
         }
+        document.getElementById("btnActi2").textContent="Completado con "+calificacion;
     }
     else{
         alert("Por favor, responda todas las preguntas para poder ser calificado.")
@@ -54,9 +54,10 @@ function Calificar3() {// Función que se manda a llamar al momento de presionar
         calificacion = calificarDragAndDrop()*10;
         alert('Su puntuacion final es de: '+calificacion.toFixed(1)+'/10.0');
         if (calificacion == 10) {
-            document.getElementById("btnActi3").textContent="Completado con 10";
+            
             document.getElementById("btnActi3").disabled = true; 
         }
+        document.getElementById("btnActi3").textContent="Completado con "+calificacion;
     }
     else{
         alert("Por favor, responda todas las preguntas para poder ser calificado.")
